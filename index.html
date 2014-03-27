@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" >
+    <head>
+        <title>Titre</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" type="text/css" href="droledebete.css">
+    </head>
+    <body>
+        <button id="bas" type="button">suivant</button>
+        <img id="image_haute" src="BI.jpg" class="rotate haute">
+        <img id="image_basse" src="SON.jpg" class="rotate basse">
+        <button id="haut" type="button">suivant</button>
+        <script type="text/javascript" src="jquery-2.1.0.js"></script>
+        <script type="text/javascript">
+            var basses = [
+            "SON.jpg",
+            "GOUROU.jpg",
+            "PILLON.jpg",
+            "CHON.jpg",
+            "CODILE.jpg",
+            "EN.jpg",
+            "MADAIRE.jpg",
+            "NARD.jpg",
+            "NOUILLE.jpg",
+            "PILLON.jpg",
+            "POTAME.jpg",
+            "SSON.jpg",
+            "TON.jpg",
+            "TUE.jpg"
+            ];
+            var hautes = [
+            "BI.jpg",
+            "KAN.jpg",
+            "PA.jpg",
+            "CO.jpg",
+            "CRO.jpg",
+            "CHI.jpg",
+            "DRO.jpg",
+            "CA.jpg",
+            "FAU.jpg",
+            "GRE.jpg",
+            "HERI.jpg",
+            "HIPPO.jpg",
+            "MOU.jpg",
+            "TOR.jpg",
+            ]
+            var index_basse=1;
+            var index_haute=1;
+            var next_image = function(idImage, index, images) {
+                $(idImage).attr("src", images[index]);
+                return index < images.length ? index + 1 : 0;
+            };
+            $("#bas").on("click", function() {
+                    index_basse = next_image("#image_basse", index_basse, basses);
+                });
+            $("#haut").on("click", function() {
+                    index_haute = next_image("#image_haute", index_haute, hautes);
+                });
+</script>
+    </body>
+</html>

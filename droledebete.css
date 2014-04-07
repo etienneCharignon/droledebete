@@ -1,27 +1,10 @@
-.rotate {
-    /* Safari */
-    -webkit-transform: rotate(-90deg);
-
-    /* Firefox */
-    -moz-transform: rotate(-90deg);
-
-    /* IE */
-    -ms-transform: rotate(-90deg);
-
-    /* Opera */
-    -o-transform: rotate(-90deg);
-
-    /* Internet Explorer */
-    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
-}
-
 .haute {
     position:absolute;
-    left:500px;
-    top:-180px;
+    left:0px;
+    top:0px;
 }
 .basse {
     position:absolute;
-    left:533px;
-    top:100px;
+    left:0px;
+    top:314px;
 }

@@ -1,13 +1,13 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" >
     <head>
-        <title>Titre</title>
+        <title>Drôle de bête</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <link rel="stylesheet" type="text/css" href="droledebete.css">
     </head>
     <body>
-        <img id="image_haute" src="BI.jpg" class="rotate haute">
-        <img id="image_basse" src="SON.jpg" class="rotate basse">
+        <img id="image_haute" src="BI.jpg" class="haute">
+        <img id="image_basse" src="SON.jpg" class="basse">
         <p></p>
         <script type="text/javascript" src="jquery-2.1.0.js"></script>
         <script type="text/javascript">
@@ -25,13 +25,13 @@
                      index: 0,
                      images : [
                          "SON.jpg", "GOUROU.jpg", "PILLON.jpg", "CHON.jpg", "CODILE.jpg",
-                     "EN.jpg", "MADAIRE.jpg", "NARD.jpg", "NOUILLE.jpg", "PILLON.jpg",
-                     "POTAME.jpg", "SSON.jpg", "TON.jpg", "TUE.jpg" ]
+                     "EN.jpg", "MADAIRE.jpg", "NARD.jpg", "CON.jpg", "NOUILLE.jpg",
+                     "SSON.jpg", "POTAME.jpg", "TON.jpg", "TUE.jpg" ]
                 }
                 ];
                 demis_betes.forEach(function(demis) {
                         $(demis.id).on("click", function(event) {
-                            demis.index += event.pageX < 600 ? -1 : 1;
+                            demis.index += event.pageX < 512 ? -1 : 1;
                             if(demis.index == demis.images.length) {
                                 demis.index = 0;
                             }
@@ -41,6 +41,6 @@
                             $(demis.id).attr("src", demis.images[demis.index]);
                             });
                         });
-</script>
+        </script>
     </body>
 </html>

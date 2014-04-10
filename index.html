@@ -4,15 +4,24 @@
         <title>Drôle de bête</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <link rel="stylesheet" type="text/css" href="droledebete.css">
+        <link rel="stylesheet" href="idangerous.swiper.css">
     </head>
     <body>
-        <img id="image_haute" src="BI.jpg" class="haute">
-        <img id="image_basse" src="SON.jpg" class="basse">
-        <script type="text/javascript" src="jquery-2.1.0.js"></script>
+      <div class="swiper-container-haute">
+        <div class="swiper-wrapper">
+        </div>
+        <div class="pagination"></div>
+      </div>
+      <div class="swiper-container-basse">
+        <div class="swiper-wrapper">
+        </div>
+        <div class="pagination"></div>
+      </div>
+        <script src="jquery-2.1.0.js"></script>
+        <script src="idangerous.swiper-2.1.min.js"></script>
         <script type="text/javascript">
             var demis_betes = [{
-                id : "#image_haute",
-                   index : 0,
+                   position : "haute",
                    images : [
                        "BI.jpg", "KAN.jpg", "PA.jpg", "CO.jpg", "CRO.jpg",
                    "CHI.jpg", "DRO.jpg", "CA.jpg", "FAU.jpg", "GRE.jpg",
@@ -20,8 +29,7 @@
                        ]
                             },
                 {
-                id : "#image_basse",
-                     index: 0,
+                     position: "basse",
                      images : [
                          "SON.jpg", "GOUROU.jpg", "PILLON.jpg", "CHON.jpg", "CODILE.jpg",
                      "EN.jpg", "MADAIRE.jpg", "NARD.jpg", "CON.jpg", "NOUILLE.jpg",
@@ -29,17 +37,12 @@
                 }
                 ];
                 demis_betes.forEach(function(demis) {
-                        $(demis.id).on("click", function(event) {
-                            demis.index += event.pageX < 512 ? -1 : 1;
-                            if(demis.index == demis.images.length) {
-                                demis.index = 0;
-                            }
-                            if(demis.index < 0) {
-                                demis.index = demis.images.length - 1;
-                            }
-                            $(demis.id).attr("src", demis.images[demis.index]);
-                            });
-                        });
+                    var mySwiper = new Swiper('.swiper-container-' + demis.position);
+                    demis.images.forEach(function(image) {
+                        mySwiper.appendSlide('<img id="image_'+ demis.position + image +'" src="'+ image +'" class=' + demis.position + '>', 'swiper-slide')
+                    });
+                    document.body.style.overflow = "hidden";
+                });
         </script>
     </body>
 </html>

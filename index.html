@@ -10,12 +10,10 @@
       <div class="swiper-container-haute">
         <div class="swiper-wrapper">
         </div>
-        <div class="pagination"></div>
       </div>
       <div class="swiper-container-basse">
         <div class="swiper-wrapper">
         </div>
-        <div class="pagination"></div>
       </div>
         <script src="jquery-2.1.0.js"></script>
         <script src="idangerous.swiper-2.1.min.js"></script>
@@ -41,7 +39,6 @@
                     demis.images.forEach(function(image) {
                         mySwiper.appendSlide('<img id="image_'+ demis.position + image +'" src="'+ image +'" class=' + demis.position + '>', 'swiper-slide')
                     });
-                    document.body.style.overflow = "hidden";
                 });
         </script>
     </body>

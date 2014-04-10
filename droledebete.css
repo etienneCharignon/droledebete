@@ -1,10 +1,8 @@
 .haute {
-    position:absolute;
-    left:0px;
-    top:0px;
+    display:block;
+    width : 100%;
 }
 .basse {
-    position:absolute;
-    left:0px;
-    top:314px;
+    display:block;
+    width : 100%;
 }

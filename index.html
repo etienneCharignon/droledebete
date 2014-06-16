@@ -15,6 +15,7 @@
         <div class="swiper-wrapper">
         </div>
       </div>
+      <input type="file" name="upload" id="upload"/>
         <script src="jquery-2.1.0.js"></script>
         <script src="idangerous.swiper-2.1.min.js"></script>
         <script type="text/javascript">
@@ -34,12 +35,21 @@
                      "SSON.jpg", "POTAME.jpg", "TON.jpg", "TUE.jpg" ]
                 }
                 ];
-                demis_betes.forEach(function(demis) {
-                    var mySwiper = new Swiper('.swiper-container-' + demis.position);
-                    demis.images.forEach(function(image) {
-                        mySwiper.appendSlide('<img id="image_'+ demis.position + image +'" src="'+ image +'" class=' + demis.position + '>', 'swiper-slide')
+                demis_betes.forEach(function(demi) {
+                    demi.swiper = new Swiper('.swiper-container-' + demi.position);
+                    demi.images.forEach(function(image) {
+                        demi.swiper.appendSlide('<img src="'+ image +'" class="' + demi.position + '">', 'swiper-slide');
                     });
                 });
+            $('#upload').on("change", function() {
+                    var f = this.files[0];
+                    var reader = new FileReader();
+                    reader.addEventListener("loadend", function() {
+                        var demi = demis_betes[0];
+                        demi.swiper.appendSlide('<img src="'+ reader.result +'" class="' + demi.position + '">', 'swiper-slide');
+                    });
+                    reader.readAsDataURL(f);
+            });
         </script>
     </body>
 </html>

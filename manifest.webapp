@@ -4,22 +4,22 @@
   "description": "Makes Strange Critters",
   "name": "Drôle de bête",
   "description": "Papillon, Canard… Panard ?",
-  "launch_path": "/index.html",
+  "launch_path": "/droledebete/index.html",
   "icons": {
-    "16": "/ressources/icons/16.jpg",
-    "32": "/ressources/icons/32.jpg",
-    "48": "/ressources/icons/48.jpg",
-    "60": "/ressources/icons/60.jpg",
-    "90": "/ressources/icons/90.jpg",
-    "120": "/ressources/icons/120.jpg",
-    "128": "/ressources/icons/128.jpg",
-    "256": "/ressources/icons/256.jpg"
+    "16": "/droledebete/ressources/icons/16.jpg",
+    "32": "/droledebete/ressources/icons/32.jpg",
+    "48": "/droledebete/ressources/icons/48.jpg",
+    "60": "/droledebete/ressources/icons/60.jpg",
+    "90": "/droledebete/ressources/icons/90.jpg",
+    "120": "/droledebete/ressources/icons/120.jpg",
+    "128": "/droledebete/ressources/icons/128.jpg",
+    "256": "/droledebete/ressources/icons/256.jpg"
   },
   "developer": {
     "name": "Étienne Charignon",
     "url": "http://etienne.charignon.free.fr"
   },
-  "appcache_path": "/manifest.appcache",
+  "appcache_path": "/droledebete/manifest.appcache",
   "orientation": "landscape-primary",
   "locales": {
     "fr": {

@@ -47,7 +47,7 @@
             var f = this.files[0];
             var reader = new FileReader();
             reader.addEventListener("loadend", function() {
-              var nouvelle_image = { file: reader.result, nomhaute: 'à définir', nombasse: 'à définir' };
+              var nouvelle_image = { file: reader.result, nomhaute: '', nombasse: '' };
               images.push(nouvelle_image);
               appendSlide(nouvelle_image);
             });

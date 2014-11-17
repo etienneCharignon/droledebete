@@ -1,11 +1,47 @@
-body {
+html, body {
+    margin: 0;
+    padding: 0;
+    height:100%;
+}
+
+.images {
+    height:95%;
+}
+.haute,.basse {
+    background-size:auto 200%;
+    background-position:center top;
+    background-repeat:no-repeat;
+    display:block;
+    height:100%;
+}
+
+.swiper-wrapper,.swiper-slide {
+    height:100%;
+}
+
+.swiper-container-haute, .swiper-container-basse {
     overflow: hidden;
+    height:50%;
 }
-.haute {
-    display:block;
-    width : 100%;
-}
+
 .basse {
-    display:block;
-    width : 100%;
+  background-position:center bottom;
+}
+
+.nomhaute, .nombasse {
+  display : inline;
+}
+
+.image-upload > input {
+  display: none;
+}
+
+.image-upload {
+  position:absolute; top:10px; left:10px;
+}
+
+.nom {
+  text-align: center;
+  font-size: 200%;
+  font-family: sans-serif;
 }

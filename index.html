@@ -7,49 +7,71 @@
         <link rel="stylesheet" href="idangerous.swiper.css">
     </head>
     <body>
-      <div class="swiper-container-haute">
-        <div class="swiper-wrapper">
+      <div class="images">
+        <div class="swiper-container-haute">
+          <div class="swiper-wrapper">
+          </div>
+        </div>
+        <div class="swiper-container-basse">
+          <div class="swiper-wrapper">
+          </div>
         </div>
       </div>
-      <div class="swiper-container-basse">
-        <div class="swiper-wrapper">
+        <div class="image-upload">
+          <label for="upload">
+            <img src="ressources/icons/plus.png"/>
+          </label>
+          <input type="file" name="upload" id="upload" accept="image/*"/>
         </div>
-      </div>
-      <input type="file" name="upload" id="upload"/>
-        <script src="jquery-2.1.0.js"></script>
+        <div class="nom" >
+          <div name="nomhaute" id="nomhaute" class="nomhaute" ></div><div name="nombasse" id="nombasse" class="nombasse" ></div>
+        </div>
+        <script src="zepto.min.js"></script>
         <script src="idangerous.swiper-2.1.min.js"></script>
         <script type="text/javascript">
-            var demis_betes = [{
-                   position : "haute",
-                   images : [
-                       "BI.jpg", "KAN.jpg", "PA.jpg", "CO.jpg", "CRO.jpg",
-                   "CHI.jpg", "DRO.jpg", "CA.jpg", "FAU.jpg", "GRE.jpg",
-                   "HERI.jpg", "HIPPO.jpg", "MOU.jpg", "TOR.jpg"
-                       ]
-                            },
-                {
-                     position: "basse",
-                     images : [
-                         "SON.jpg", "GOUROU.jpg", "PILLON.jpg", "CHON.jpg", "CODILE.jpg",
-                     "EN.jpg", "MADAIRE.jpg", "NARD.jpg", "CON.jpg", "NOUILLE.jpg",
-                     "SSON.jpg", "POTAME.jpg", "TON.jpg", "TUE.jpg" ]
-                }
-                ];
-                demis_betes.forEach(function(demi) {
-                    demi.swiper = new Swiper('.swiper-container-' + demi.position);
-                    demi.images.forEach(function(image) {
-                        demi.swiper.appendSlide('<img src="'+ image +'" class="' + demi.position + '">', 'swiper-slide');
-                    });
-                });
-            $('#upload').on("change", function() {
-                    var f = this.files[0];
-                    var reader = new FileReader();
-                    reader.addEventListener("loadend", function() {
-                        var demi = demis_betes[0];
-                        demi.swiper.appendSlide('<img src="'+ reader.result +'" class="' + demi.position + '">', 'swiper-slide');
-                    });
-                    reader.readAsDataURL(f);
+          var images = [
+            { file : 'ressources/images/canard.jpg', nomhaute : "CA", nombasse : "NARD" },
+            { file : 'ressources/images/papillon.jpg', nomhaute : "PA", nombasse : "PILLON" }
+          ];
+          var swipers = [{
+             position : "haute",
+             instance : new Swiper('.swiper-container-haute')
+          },
+          {
+            position: "basse",
+            instance : new Swiper('.swiper-container-basse')
+          }];
+
+          images.forEach(function(image) {
+            appendSlide(image);
+            swipers.forEach(function(swiper) {
+              afficherNom(swiper.position, 0)
+              swiper.instance.wrapperTransitionEnd(function() {
+                afficherNom(swiper.position, swiper.instance.activeIndex)
+              }, true);
             });
-        </script>
-    </body>
+          });
+
+          $('#upload').on("change", function() {
+            var f = this.files[0];
+            var reader = new FileReader();
+            reader.addEventListener("loadend", function() {
+              var nouvelle_image = { file: reader.result, nomhaute: 'à définir', nombasse: 'à définir' };
+              images.push(nouvelle_image);
+              appendSlide(nouvelle_image);
+            });
+            reader.readAsDataURL(f);
+          });
+
+
+          function appendSlide(image) {
+            swipers.forEach(function(swiper) {
+              swiper.instance.appendSlide('<div style="background-image:url(' + image.file + ')" class="' + swiper.position + '"></div>', 'swiper-slide');
+            });
+          }
+          function afficherNom(position, index) {
+            $('#nom' + position).text(images[index]['nom' + position])
+          }
+      </script>
+  </body>
 </html>

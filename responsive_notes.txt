@@ -1,6 +1,0 @@
-Hauteur de l'image du haut : 314
-Hauteur de l'image du bas : 249
-
-Largeur des deux : 1024
-
-Deux zones de 512 de large (clique à droite, clique à gauche)

@@ -2,8 +2,6 @@
   "version": "1.0",
   "name": "Strange Critters",
   "description": "Makes Strange Critters",
-  "name": "Drôle de bête",
-  "description": "Papillon, Canard… Panard ?",
   "launch_path": "/index.html",
   "icons": {
     "16": "/ressources/icons/16.jpg",

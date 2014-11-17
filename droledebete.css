@@ -5,7 +5,7 @@ html, body {
 }
 
 .images {
-    height:95%;
+    height:100%;
 }
 .haute,.basse {
     background-size:auto 200%;
@@ -13,6 +13,7 @@ html, body {
     background-repeat:no-repeat;
     display:block;
     height:100%;
+    position:relative;
 }
 
 .swiper-wrapper,.swiper-slide {
@@ -28,8 +29,14 @@ html, body {
   background-position:center bottom;
 }
 
-.nomhaute, .nombasse {
+.nombasse {
   display : inline;
+  position:absolute; top:0px; left:30px;
+}
+
+.nomhaute {
+  display : inline;
+  position:absolute; bottom:0px; left:30px;
 }
 
 .image-upload > input {
@@ -42,6 +49,8 @@ html, body {
 
 .nom {
   text-align: center;
-  font-size: 200%;
+  font-size: 6vh;
   font-family: sans-serif;
+  width : 0px;
+  word-wrap : break-word;
 }

@@ -23,9 +23,6 @@
           </label>
           <input type="file" name="upload" id="upload" accept="image/*"/>
         </div>
-        <div class="nom" >
-          <div name="nomhaute" id="nomhaute" class="nomhaute" ></div><div name="nombasse" id="nombasse" class="nombasse" ></div>
-        </div>
         <script src="zepto.min.js"></script>
         <script src="idangerous.swiper-2.1.min.js"></script>
         <script type="text/javascript">
@@ -44,12 +41,6 @@
 
           images.forEach(function(image) {
             appendSlide(image);
-            swipers.forEach(function(swiper) {
-              afficherNom(swiper.position, 0)
-              swiper.instance.wrapperTransitionEnd(function() {
-                afficherNom(swiper.position, swiper.instance.activeIndex)
-              }, true);
-            });
           });
 
           $('#upload').on("change", function() {
@@ -66,11 +57,11 @@
 
           function appendSlide(image) {
             swipers.forEach(function(swiper) {
-              swiper.instance.appendSlide('<div style="background-image:url(' + image.file + ')" class="' + swiper.position + '"></div>', 'swiper-slide');
+              swiper.instance.appendSlide(
+                '<div style="background-image:url(' + image.file + ')" class="' + swiper.position + '">' +
+                  '<div name="nom' + swiper.position + '" id="nom' + swiper.position + '" class="nom' + swiper.position + ' nom" >' + image['nom'+ swiper.position] + '</div>' +
+                '</div>', 'swiper-slide');
             });
-          }
-          function afficherNom(position, index) {
-            $('#nom' + position).text(images[index]['nom' + position])
           }
       </script>
   </body>

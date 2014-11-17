@@ -1,7 +1,7 @@
 {
   "version": "1.0",
   "name": "Strange Critters",
-  "description": "Makes Strange Critters"
+  "description": "Makes Strange Critters",
   "name": "Drôle de bête",
   "description": "Papillon, Canard… Panard ?",
   "launch_path": "/index.html",
@@ -14,7 +14,7 @@
     "120": "/ressources/icons/120.jpg",
     "128": "/ressources/icons/128.jpg",
     "256": "/ressources/icons/256.jpg"
-  }
+  },
   "developer": {
     "name": "Étienne Charignon",
     "url": "http://etienne.charignon.free.fr"
@@ -27,5 +27,5 @@
       "description": "Papillon, Canard, Panard ?"
     }
   },
-  "default_locale": "en",
+  "default_locale": "en"
 }

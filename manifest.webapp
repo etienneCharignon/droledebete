@@ -1,7 +1,7 @@
 {
   "version": "1.0",
-  "name": "Strange Critters",
-  "description": "Makes Strange Critters",
+  "name": "StrangeCrit",
+  "description": "Makes strange critters. From a collection of images, switch tops and bottoms in order to create strange creatures.",
   "launch_path": "/droledebete/index.html",
   "icons": {
     "16": "/droledebete/ressources/icons/16.jpg",
@@ -21,8 +21,8 @@
   "orientation": "landscape-primary",
   "locales": {
     "fr": {
-      "name": "Drôle de bête",
-      "description": "Papillon, Canard, Panard ?"
+      "name": "DrôleDeBête",
+      "description": "Papillon, Canard : Panard ? À partir d'une série d'images jouez à permuter les hauts et les bas dans le but de créer de drôles de bêtes."
     }
   },
   "default_locale": "en"

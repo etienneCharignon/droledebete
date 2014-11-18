@@ -1,0 +1,21 @@
+{
+  "name": "droledebete",
+  "version": "1.1",
+  "homepage": "https://github.com/ut7/droledebete",
+  "authors": [
+    "Étienne Charignon <etienne.charignon@gmail.com>"
+  ],
+  "license": "None",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "zepto": "~1.1.4",
+    "idangerous-swiper": "~2.7.0"
+  }
+}

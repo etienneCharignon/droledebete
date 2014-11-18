@@ -3,18 +3,18 @@ CACHE MANIFEST
 # Version 1.0
 
 CACHE:
-droledebete/droledebete.css
-droledebete/idangerous.swiper-2.1.min.js
-droledebete/index.html
-droledebete/zepto.min.js
-droledebete/ressources/icons/120.jpg
-droledebete/ressources/icons/128.jpg
-droledebete/ressources/icons/16.jpg
-droledebete/ressources/icons/256.jpg
-droledebete/ressources/icons/32.jpg
-droledebete/ressources/icons/48.jpg
-droledebete/ressources/icons/60.jpg
-droledebete/ressources/icons/90.jpg
-droledebete/ressources/icons/plus.png
-droledebete/ressources/images/canard.jpg
-droledebete/ressources/images/papillon.jpg
+droledebete.css
+idangerous.swiper-2.1.min.js
+index.html
+zepto.min.js
+ressources/icons/120.jpg
+ressources/icons/128.jpg
+ressources/icons/16.jpg
+ressources/icons/256.jpg
+ressources/icons/32.jpg
+ressources/icons/48.jpg
+ressources/icons/60.jpg
+ressources/icons/90.jpg
+ressources/icons/plus.png
+ressources/images/canard.jpg
+ressources/images/papillon.jpg

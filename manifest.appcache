@@ -1,12 +1,13 @@
 CACHE MANIFEST
 
-# Version 1.1
+# Version 1.2
 
 CACHE:
 droledebete.css
-idangerous.swiper-2.7.min.js
+bower_components/idangerous-swiper/dist/idangerous.swiper.min.js
+bower_components/idangerous-swiper/dist/idangerous.swiper.css
 index.html
-zepto.min.js
+bower_components/zepto/zepto.min.js
 ressources/icons/120.jpg
 ressources/icons/128.jpg
 ressources/icons/16.jpg
